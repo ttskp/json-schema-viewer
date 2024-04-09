@@ -5,6 +5,7 @@ import { RouteComponentProps, withRouter } from 'react-router-dom';
 import TextField from '@atlaskit/textfield';
 import Button from '@atlaskit/button';
 import { Markdown } from './markdown';
+import YAML from 'yaml'
 
 export type StartProps = RouteComponentProps & {
 
@@ -102,6 +103,50 @@ export class StartWR extends React.PureComponent<StartProps, StartState> {
       this.setState(() => ({ urlInput: currentValue || '' }));
     }
 
+    interface ReadResult {
+      filename: string;
+      result: string;
+    }
+
+    const readFile = async (file: File): Promise<ReadResult> => {
+      return new Promise((resolve, reject) => {
+        const arrayBufferReader = new FileReader();
+        arrayBufferReader.readAsArrayBuffer(file);
+        arrayBufferReader.onload = async () => {
+          const textReader = new FileReader();
+          textReader.readAsText(file, 'UTF-8');
+          textReader.onload = () => resolve({
+            filename: file.name,
+            // as string because we use readAsText...
+            result: textReader.result as string
+          });
+          textReader.onerror = reject;
+        };
+        arrayBufferReader.onerror = reject;
+      });
+    };
+
+    const toObject = (str: string, extension: string) => {
+      if (extension === "yml" || extension === "yaml") {
+        return YAML.parse(str);
+      } else if(extension === "json") {
+        return JSON.parse(str);
+      }
+    }
+
+    const onFileChange: React.FormEventHandler<HTMLInputElement> = async e => {
+      // @ts-ignore
+      const [file] = e.currentTarget.files;
+      const {filename, result} = await readFile(file);
+      // @ts-ignore
+      const obj = toObject(result, filename.split(".").at(-1));
+      const json = JSON.stringify(obj)
+      console.log(`data:application/json;base64,${btoa(json)}`);
+      console.log('currentValue', obj);
+      this.setState(() => ({ urlInput: `data:application/json;base64,${btoa(json)}` }));
+      handleOnClick();
+    }
+
     return (
       <EmptyState
         header="Load a JSON Schema"
@@ -111,6 +156,10 @@ export class StartWR extends React.PureComponent<StartProps, StartState> {
             <StartWR.Flex>
               <TextField isCompact={false} value={this.state.urlInput || ''} onChange={onTextChange} />
               <Button label="submit" onClick={handleOnClick} appearance="primary">Load Schema</Button>
+            </StartWR.Flex>
+            <StartWR.Flex>
+              <span>load schema file (yml/json)</span>
+              <input type="file" onChange={onFileChange} />
             </StartWR.Flex>
             <StartWR.Guide><Markdown source={DevelopingSchemaInstructions} /></StartWR.Guide>
           </StartWR.InputWidth>
