@@ -68,6 +68,26 @@
     "prop-types" "^15.5.10"
     "use-memo-one" "^1.1.1"
 
+"@atlaskit/analytics-next@^9.2.0":
+  "integrity" "sha512-zTtM6xHTNNMO0dxiPrsxMko6BawEh4wN0wWSvMdQXdnusvvWNEE8rnpjn23kS4M08bYWIEstRbgoPLx6VQisug=="
+  "resolved" "https://registry.npmjs.org/@atlaskit/analytics-next/-/analytics-next-9.2.3.tgz"
+  "version" "9.2.3"
+  dependencies:
+    "@atlaskit/analytics-next-stable-react-context" "1.0.1"
+    "@atlaskit/platform-feature-flags" "^0.2.2"
+    "@babel/runtime" "^7.0.0"
+    "prop-types" "^15.5.10"
+    "use-memo-one" "^1.1.1"
+
+"@atlaskit/app-provider@^1.3.0":
+  "integrity" "sha512-0bHfIbXyCbYjuv0zMyHPyuCcyW5IIVCBsNbYEbEl9w5P9hChPyewNrz1VkNPRQBg18DF1zxIIsNyZOEuQjvs7Q=="
+  "resolved" "https://registry.npmjs.org/@atlaskit/app-provider/-/app-provider-1.3.0.tgz"
+  "version" "1.3.0"
+  dependencies:
+    "@atlaskit/tokens" "^1.43.0"
+    "@babel/runtime" "^7.0.0"
+    "bind-event-listener" "^2.1.1"
+
 "@atlaskit/atlassian-navigation@^0.12.5":
   "integrity" "sha512-hLWdOsBhMCPtvEPL4nsuPJ0+5GYdlgNltbeK6VzEhAzBcRBTDZPt9xVIlDOU+w3lxXIHi3RRCssLi8PPhjGmEQ=="
   "resolved" "https://registry.npmjs.org/@atlaskit/atlassian-navigation/-/atlassian-navigation-0.12.5.tgz"
@@ -164,6 +184,15 @@
     "@babel/runtime" "^7.0.0"
     "fbjs" "^3.0.0"
 
+"@atlaskit/css@^0.0.6":
+  "integrity" "sha512-LAocoHW1q/y4teVcHBQVFZSrSyLnbn70Dfz48K2Ej79JZNs8xxS/Ue0AxXHJDBW9ocTaUQviAdNelDKP7c8hiQ=="
+  "resolved" "https://registry.npmjs.org/@atlaskit/css/-/css-0.0.6.tgz"
+  "version" "0.0.6"
+  dependencies:
+    "@atlaskit/tokens" "^1.43.0"
+    "@babel/runtime" "^7.0.0"
+    "@compiled/react" "^0.17.0"
+
 "@atlaskit/ds-explorations@^2.2.0":
   "integrity" "sha512-tgPZfRpAWUyPKB1qrpZy8ZKBlIfDVdD8QMdtXbSL4IewBLsHnfaTmkN5Wz5G7KE1YrBu20hkLwPJtqmULTdgsw=="
   "resolved" "https://registry.npmjs.org/@atlaskit/ds-explorations/-/ds-explorations-2.2.3.tgz"
@@ -201,6 +230,23 @@
     "@babel/runtime" "^7.0.0"
     "@emotion/react" "^11.7.1"
 
+"@atlaskit/form@^9.1.2":
+  "integrity" "sha512-NxoRctEZbB3mu7EuaNOuot8Pfj1tStk1vGKOwCwMs+VJpGO5bWWY6h4fY4OCgp+EJwsrQryYT+Ynvahq1mEWBQ=="
+  "resolved" "https://registry.npmjs.org/@atlaskit/form/-/form-9.1.2.tgz"
+  "version" "9.1.2"
+  dependencies:
+    "@atlaskit/icon" "^22.1.0"
+    "@atlaskit/primitives" "^5.5.0"
+    "@atlaskit/theme" "^12.7.0"
+    "@atlaskit/tokens" "^1.43.0"
+    "@babel/runtime" "^7.0.0"
+    "@emotion/react" "^11.7.1"
+    "final-form" "^4.20.3"
+    "final-form-focus" "^1.1.2"
+    "lodash" "^4.17.21"
+    "react-uid" "^2.2.0"
+    "tiny-invariant" "^1.2.0"
+
 "@atlaskit/icon@^21.1.0", "@atlaskit/icon@^21.12.0", "@atlaskit/icon@^21.2.0":
   "integrity" "sha512-KnyyW8+q8npatIt3BPLeYCy76KlRs0Kr2of8DqAIrCduJHeLX/ff/8Jo0kn4hNF+mv5sdNx4X/44KsP6ODU7+w=="
   "resolved" "https://registry.npmjs.org/@atlaskit/icon/-/icon-21.12.4.tgz"
@@ -208,6 +254,15 @@
   dependencies:
     "@atlaskit/theme" "^12.5.0"
     "@atlaskit/tokens" "^1.5.0"
+    "@babel/runtime" "^7.0.0"
+    "@emotion/react" "^11.7.1"
+
+"@atlaskit/icon@^22.1.0":
+  "integrity" "sha512-Au2xcpGAF8BPSjsOetc665co3hY8gPW+NuBB0FdMKqi4+riCi5/JE6hLuEF79cB8U24CKKt+ZgIjy8kg8DNvug=="
+  "resolved" "https://registry.npmjs.org/@atlaskit/icon/-/icon-22.1.1.tgz"
+  "version" "22.1.1"
+  dependencies:
+    "@atlaskit/tokens" "^1.38.0"
     "@babel/runtime" "^7.0.0"
     "@emotion/react" "^11.7.1"
 
@@ -269,7 +324,7 @@
     "@emotion/react" "^11.7.1"
     "bind-event-listener" "^2.1.1"
 
-"@atlaskit/platform-feature-flags@^0.2.0":
+"@atlaskit/platform-feature-flags@^0.2.0", "@atlaskit/platform-feature-flags@^0.2.2":
   "integrity" "sha512-9wsjb1ii4t4+IWnwC/jBvWpY8/Jqng59KQH/SNEEoBifZrP4vNAH6vpv8+gPeAhFK+2Pqpxr33yC1U4+sreNew=="
   "resolved" "https://registry.npmjs.org/@atlaskit/platform-feature-flags/-/platform-feature-flags-0.2.2.tgz"
   "version" "0.2.2"
@@ -318,6 +373,24 @@
     "@emotion/react" "^11.7.1"
     "@emotion/serialize" "^1.1.0"
     "bind-event-listener" "^2.1.1"
+
+"@atlaskit/primitives@^5.5.0":
+  "integrity" "sha512-HCv/NPrkiKBsdAWfwwgwvAq1xhgR6g0s+TrDBxcS34nju1jt+1Ebkpkpd9kVTdv/QI1/JcVDPm02Md41bLlnKw=="
+  "resolved" "https://registry.npmjs.org/@atlaskit/primitives/-/primitives-5.5.2.tgz"
+  "version" "5.5.2"
+  dependencies:
+    "@atlaskit/analytics-next" "^9.2.0"
+    "@atlaskit/app-provider" "^1.3.0"
+    "@atlaskit/css" "^0.0.6"
+    "@atlaskit/ds-lib" "^2.2.0"
+    "@atlaskit/interaction-context" "^2.1.0"
+    "@atlaskit/tokens" "^1.43.0"
+    "@atlaskit/visually-hidden" "^1.2.4"
+    "@babel/runtime" "^7.0.0"
+    "@emotion/react" "^11.7.1"
+    "@emotion/serialize" "^1.1.0"
+    "bind-event-listener" "^2.1.1"
+    "tiny-invariant" "^1.2.0"
 
 "@atlaskit/spinner@^15.0.0", "@atlaskit/spinner@^15.0.6", "@atlaskit/spinner@^15.5.0":
   "integrity" "sha512-7NVBCut1gd5ddyQwwBuWI44zGMNA9hj4by3jVqRKez57VOh4NCvZcxI7BcBehPomRQp4YnBE0Ueib2k//BvEmA=="
@@ -388,15 +461,25 @@
     "@atlaskit/tokens" "^1.4.0"
     "@babel/runtime" "^7.0.0"
 
-"@atlaskit/tokens@^1.4.0", "@atlaskit/tokens@^1.5.0", "@atlaskit/tokens@^1.8.0":
-  "integrity" "sha512-Rqe6Xlgd0+sucbKYbngpCl+TTRiD71/cJD1MgBNxbYvShbLVjQOLoUkXjdkkaWjHLMolWcIsmabSqXbCNUokJA=="
-  "resolved" "https://registry.npmjs.org/@atlaskit/tokens/-/tokens-1.8.0.tgz"
-  "version" "1.8.0"
+"@atlaskit/theme@^12.7.0":
+  "integrity" "sha512-x5hVwMpfb2AD1VF9mUOeYzFAiZE4RVFDpyfaLmJ+YsNe6RSzz547krGeiCvrRGrQbfFPMtg5Xq3G1oZC8cLQow=="
+  "resolved" "https://registry.npmjs.org/@atlaskit/theme/-/theme-12.7.0.tgz"
+  "version" "12.7.0"
+  dependencies:
+    "@atlaskit/codemod-utils" "^4.2.0"
+    "@atlaskit/ds-lib" "^2.2.0"
+    "@atlaskit/tokens" "^1.42.0"
+    "@babel/runtime" "^7.0.0"
+
+"@atlaskit/tokens@^1.38.0", "@atlaskit/tokens@^1.4.0", "@atlaskit/tokens@^1.42.0", "@atlaskit/tokens@^1.43.0", "@atlaskit/tokens@^1.5.0", "@atlaskit/tokens@^1.8.0":
+  "integrity" "sha512-3rRxGRnJGQBVKGqNqy+Zuad3xuDZ7uD+aFGRcU2OpLuIpiFLX95agDZ9w0HGzNiDw9eWi2f1j8Uzq06AyaRqTw=="
+  "resolved" "https://registry.npmjs.org/@atlaskit/tokens/-/tokens-1.43.0.tgz"
+  "version" "1.43.0"
   dependencies:
     "@atlaskit/ds-lib" "^2.2.0"
     "@atlaskit/platform-feature-flags" "^0.2.0"
     "@babel/runtime" "^7.0.0"
-    "@babel/traverse" "^7.20.0"
+    "@babel/traverse" "^7.23.2"
     "@babel/types" "^7.20.0"
     "bind-event-listener" "^2.1.1"
 
@@ -417,10 +500,10 @@
     "bind-event-listener" "^2.1.1"
     "react-uid" "^2.2.0"
 
-"@atlaskit/visually-hidden@^1.2.0":
-  "integrity" "sha512-73HpmFZPsCFY1WI9fRVL+Kx5xj80Yt7LNYATkxTVLGmpChDL03sjMQICLkcT26dOqfD/onlFqrGQc09JtsReBg=="
-  "resolved" "https://registry.npmjs.org/@atlaskit/visually-hidden/-/visually-hidden-1.2.3.tgz"
-  "version" "1.2.3"
+"@atlaskit/visually-hidden@^1.2.0", "@atlaskit/visually-hidden@^1.2.4":
+  "integrity" "sha512-khxJB6456uMS1IkwnsH0ZTYGVAnE83aoGarz388I0zPydOZdNeeEdwsRPFOn9mua88Ez+rL0OEWV22k6XRUf6A=="
+  "resolved" "https://registry.npmjs.org/@atlaskit/visually-hidden/-/visually-hidden-1.2.5.tgz"
+  "version" "1.2.5"
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@emotion/react" "^11.7.1"
@@ -1765,7 +1848,7 @@
     "core-js-pure" "^3.30.2"
     "regenerator-runtime" "^0.13.11"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.0", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2":
   "integrity" "sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg=="
   "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.12.5.tgz"
   "version" "7.12.5"
@@ -1823,7 +1906,7 @@
     "@babel/parser" "^7.24.0"
     "@babel/types" "^7.24.0"
 
-"@babel/traverse@^7.1.6", "@babel/traverse@^7.10.2", "@babel/traverse@^7.20.0", "@babel/traverse@^7.21.5", "@babel/traverse@^7.22.5", "@babel/traverse@^7.24.1", "@babel/traverse@^7.7.2":
+"@babel/traverse@^7.1.6", "@babel/traverse@^7.10.2", "@babel/traverse@^7.21.5", "@babel/traverse@^7.22.5", "@babel/traverse@^7.23.2", "@babel/traverse@^7.24.1", "@babel/traverse@^7.7.2":
   "integrity" "sha512-xuU6o9m68KeqZbQuDt2TcKSxUw/mrsvavlEqQ1leZ/B+C9tk6E4sRWy97WaXgvq5E+nU3cXMxv3WKOCanVMCmQ=="
   "resolved" "https://registry.npmjs.org/@babel/traverse/-/traverse-7.24.1.tgz"
   "version" "7.24.1"
@@ -1953,6 +2036,13 @@
     "postcss-normalize-whitespace" "^4.0.2"
     "postcss-selector-parser" "^6.0.2"
     "postcss-values-parser" "^4.0.0"
+
+"@compiled/react@^0.17.0":
+  "integrity" "sha512-1CzTOrwNHOUmz9QGYHv8R8J6ejUyaNYiaUN6/dIM0Wu3G5CIam0KgsqvRikfGPrTtBfAQYMmdI9ytzxUKYwJrg=="
+  "resolved" "https://registry.npmjs.org/@compiled/react/-/react-0.17.1.tgz"
+  "version" "0.17.1"
+  dependencies:
+    "csstype" "^3.1.2"
 
 "@compiled/react@^0.5.0":
   "integrity" "sha512-j8LnwinzGLlwVTCHz1yMNC71X2MdAp9oDMamBpWr6txNlnIlfWncqMdRU7BTINq4AAKhcF1wSO58zcbgNFpikw=="
@@ -2107,9 +2197,9 @@
     "csstype" "^2.5.7"
 
 "@emotion/serialize@^1.1.0":
-  "integrity" "sha512-zR6a/fkFP4EAcCMQtLOhIgpprZOwNmCldtpaISpvz348+DP4Mz8ZoKaGGCQpbzepNIUWbq4w6hNZkwDyKoS+HA=="
-  "resolved" "https://registry.npmjs.org/@emotion/serialize/-/serialize-1.1.2.tgz"
-  "version" "1.1.2"
+  "integrity" "sha512-RIN04MBT8g+FnDwgvIUi8czvr1LU1alUMI05LekWB5DGyTm8cCBMCRpq3GqaiyEDRptEXOyXnvZ58GZYu4kBxQ=="
+  "resolved" "https://registry.npmjs.org/@emotion/serialize/-/serialize-1.1.4.tgz"
+  "version" "1.1.4"
   dependencies:
     "@emotion/hash" "^0.9.1"
     "@emotion/memoize" "^0.8.1"
@@ -5802,10 +5892,10 @@
   "resolved" "https://registry.npmjs.org/csstype/-/csstype-2.6.14.tgz"
   "version" "2.6.14"
 
-"csstype@^3.0.2":
-  "integrity" "sha512-+ZAmfyWMT7TiIlzdqJgjMb7S4f1beorDbWbsocyK4RaiqA5RTX3K14bnBWmmA9QEM0gRdsjyyrEmcyga8Zsxmw=="
-  "resolved" "https://registry.npmjs.org/csstype/-/csstype-3.0.6.tgz"
-  "version" "3.0.6"
+"csstype@^3.0.2", "csstype@^3.1.2":
+  "integrity" "sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw=="
+  "resolved" "https://registry.npmjs.org/csstype/-/csstype-3.1.3.tgz"
+  "version" "3.1.3"
 
 "d@^1.0.1", "d@1":
   "integrity" "sha512-m62ShEObQ39CfralilEQRjH6oAMtNCV1xJyEx5LpRYUVN+EviphDgUc/F3hnYbADmkiNs67Y+3ylmlG7Lnu+FA=="
@@ -6870,6 +6960,18 @@
   "version" "7.0.1"
   dependencies:
     "to-regex-range" "^5.0.1"
+
+"final-form-focus@^1.1.2":
+  "integrity" "sha512-Gd+Bd2Ll7ijo3/sd6kJ/bwLkhc2bUJPxTON6fIqee/008EJpACWhT+zoWCm9q6NcfMcWRS+Sp5ikRX8iqdXeGQ=="
+  "resolved" "https://registry.npmjs.org/final-form-focus/-/final-form-focus-1.1.2.tgz"
+  "version" "1.1.2"
+
+"final-form@^4.20.3", "final-form@>=1.3.0":
+  "integrity" "sha512-TL48Pi1oNHeMOHrKv1bCJUrWZDcD3DIG6AGYVNOnyZPr7Bd/pStN0pL+lfzF5BNoj/FclaoiaLenk4XUIFVYng=="
+  "resolved" "https://registry.npmjs.org/final-form/-/final-form-4.20.10.tgz"
+  "version" "4.20.10"
+  dependencies:
+    "@babel/runtime" "^7.10.0"
 
 "finalhandler@1.2.0":
   "integrity" "sha512-5uXcUVftlQMFnWC9qu/svkWv3GTd2PfUhK/3PLkYNAe7FbqJMt3515HaxE6eRL74GdsriiwujiawdaB1BpEISg=="
@@ -9026,12 +9128,7 @@
   "resolved" "https://registry.npmjs.org/lodash.uniq/-/lodash.uniq-4.5.0.tgz"
   "version" "4.5.0"
 
-"lodash@^4.17.15", "lodash@^4.17.20", "lodash@^4.17.4":
-  "integrity" "sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA=="
-  "resolved" "https://registry.npmjs.org/lodash/-/lodash-4.17.20.tgz"
-  "version" "4.17.20"
-
-"lodash@^4.17.21":
+"lodash@^4.17.15", "lodash@^4.17.20", "lodash@^4.17.21", "lodash@^4.17.4":
   "integrity" "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
   "resolved" "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   "version" "4.17.21"
@@ -11412,7 +11509,7 @@
   dependencies:
     "tslib" "^1.10.0"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1 || ^18.0.0", "react@^15.3.0 || ^16.0.0", "react@^16.14.0", "react@^16.8", "react@^16.8.0", "react@^16.8.0 || ^17", "react@^16.8.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.4 || ^17.0.0 || ^18.0.0", "react@>= 0.14.0", "react@>= 0.14.0 < 17.0.0-0", "react@>= 16.12.0", "react@>=15", "react@>=16", "react@>=16.3.0", "react@>=16.8.0", "react@16.8.0 - 18":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1 || ^18.0.0", "react@^15.3.0 || ^16.0.0", "react@^16.14.0", "react@^16.8", "react@^16.8.0", "react@^16.8.0 || ^17", "react@^16.8.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ~18.2.0", "react@^16.8.4 || ^17.0.0 || ^18.0.0", "react@>= 0.14.0", "react@>= 0.14.0 < 17.0.0-0", "react@>= 16.12.0", "react@>=15", "react@>=16", "react@>=16.3.0", "react@>=16.8.0", "react@16.8.0 - 18":
   "integrity" "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
   "version" "16.14.0"
@@ -12831,15 +12928,10 @@
   "resolved" "https://registry.npmjs.org/tiny-emitter/-/tiny-emitter-2.1.0.tgz"
   "version" "2.1.0"
 
-"tiny-invariant@^1.0.2":
-  "integrity" "sha512-ytxQvrb1cPc9WBEI/HSeYYoGD0kWnGEOR8RY6KomWLBVhqz0RgTwVO9dLrGz7dC+nN9llyI7OKAgRq8Vq4ZBSw=="
-  "resolved" "https://registry.npmjs.org/tiny-invariant/-/tiny-invariant-1.1.0.tgz"
-  "version" "1.1.0"
-
-"tiny-invariant@^1.2.0":
-  "integrity" "sha512-AD5ih2NlSssTCwsMznbvwMZpJ1cbhkGd2uueNxzv2jDlEeZdU04JQfRnggJQ8DrcVBGjAsCKwFBbDlVNtEMlzw=="
-  "resolved" "https://registry.npmjs.org/tiny-invariant/-/tiny-invariant-1.3.1.tgz"
-  "version" "1.3.1"
+"tiny-invariant@^1.0.2", "tiny-invariant@^1.2.0":
+  "integrity" "sha512-+FbBPE1o9QAYvviau/qC5SE3caw21q3xkvWKBtja5vgqOWIHHJ3ioaq1VPfn/Szqctz2bU/oYeKd9/z5BL+PVg=="
+  "resolved" "https://registry.npmjs.org/tiny-invariant/-/tiny-invariant-1.3.3.tgz"
+  "version" "1.3.3"
 
 "tiny-warning@^1.0.0", "tiny-warning@^1.0.3":
   "integrity" "sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA=="

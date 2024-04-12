@@ -3,9 +3,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import TextField from '@atlaskit/textfield';
+import { Label } from '@atlaskit/form';
 import Button from '@atlaskit/button';
 import { Markdown } from './markdown';
 import YAML from 'yaml'
+import { fontSize } from '@atlaskit/theme';
+import { background } from '@atlaskit/theme/colors';
 
 export type StartProps = RouteComponentProps & {
 
@@ -134,6 +137,14 @@ export class StartWR extends React.PureComponent<StartProps, StartState> {
       }
     }
 
+    const toObjectTry = (str: string) => {
+      try{
+        return YAML.parse(str);
+      } catch(e) {
+        return JSON.parse(str);
+      }
+    }
+
     const onFileChange: React.FormEventHandler<HTMLInputElement> = async e => {
       // @ts-ignore
       const [file] = e.currentTarget.files;
@@ -147,6 +158,17 @@ export class StartWR extends React.PureComponent<StartProps, StartState> {
       handleOnClick();
     }
 
+    const handleOnClickText = async () => {
+      const obj = toObjectTry(document.querySelector("textarea")!.value);
+      console.warn(obj);
+      const json = JSON.stringify(obj);
+      console.log(`data:application/json;base64,${btoa(json)}`);
+      console.log('currentValue', obj);
+      console.log(`data:application/json;base64,${btoa(json)}`);
+      this.setState(() => ({ urlInput: `data:application/json;base64,${btoa(json)}` }));
+      history.push(`/view/${encodeURIComponent('#')}?url=${encodeURIComponent(`data:application/json;base64,${btoa(json)}`)}`);
+    }
+
     return (
       <EmptyState
         header="Load a JSON Schema"
@@ -154,12 +176,25 @@ export class StartWR extends React.PureComponent<StartProps, StartState> {
         primaryAction={(
           <StartWR.InputWidth>
             <StartWR.Flex>
-              <TextField isCompact={false} value={this.state.urlInput || ''} onChange={onTextChange} />
+              <Label htmlFor="url">Url</Label>
+              <TextField id="url" isCompact={false} value={this.state.urlInput || ''} onChange={onTextChange} />
               <Button label="submit" onClick={handleOnClick} appearance="primary">Load Schema</Button>
             </StartWR.Flex>
-            <StartWR.Flex>
-              <span>load schema file (yml/json)</span>
-              <input type="file" onChange={onFileChange} />
+
+            <div style={{ marginTop: '12px', border: '1px solid', borderColor: "#dcdddd" }}></div>
+
+            <StartWR.Flex style={{ marginTop: '12px', display: 'flex' }}>
+              <Label htmlFor="url">File (json/yml)</Label>
+              <input id="file" type="file" onChange={onFileChange} />
+            </StartWR.Flex>
+
+            <div style={{ marginTop: '12px', border: '1px solid', borderColor: "#dcdddd"}}></div>
+
+            <StartWR.Flex style={{ marginTop: '12px', display: 'flex' }}>
+              <textarea id="text" style={{ height: 'auto', flexGrow: '1', fieldSizing: 'content' }} />
+            </StartWR.Flex>
+            <StartWR.Flex style={{ marginTop: '24px', display: 'flex' }}>
+              <Button label="submit" onClick={handleOnClickText} appearance="primary">Load Schema</Button>
             </StartWR.Flex>
             <StartWR.Guide><Markdown source={DevelopingSchemaInstructions} /></StartWR.Guide>
           </StartWR.InputWidth>
